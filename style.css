@@ -1,0 +1,71 @@
+.switch-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, .7),
+          10px 10px 10px rgba(0, 0, 0, .2),
+          inset 8px 8px 15px rgba(255, 255, 255, .7),
+          inset 10px 10px 10px rgba(0, 0, 0, .2);
+          background-color: rgb(204, 202, 195);
+  }
+  
+  .switch-label {
+    padding: 0 30px 0 10px;
+  }
+  
+  .switch-label i {
+    margin: 30px;
+  }
+  
+  .switch-toggle {
+    height: 40px;
+  }
+  
+  .switch-toggle input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -2;
+    
+  }
+  
+  .switch-toggle input[type="checkbox"]+label {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+   right: 190px;
+    cursor: pointer;
+    box-shadow: inset -8px -8px 15px rgba(255, 255, 255, .6),
+          inset 10px 10px 10px rgba(0, 0, 0, .25);
+            left: 10px;
+  }
+  
+  .switch-toggle input[type="checkbox"]+label::before {
+    position: absolute;
+    content: 'OFF';
+    font-size: 13px;
+    text-align: center;
+    line-height: 25px;
+    top: 8px;
+    left: 7px;
+    width: 35px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: #eeeeee;
+    box-shadow: -3px -3px 5px rgba(255, 255, 255, .5),
+          3px 3px 5px rgba(0, 0, 0, .25);
+    transition: .3s ease-in-out;
+  }
+  
+  .switch-toggle input[type="checkbox"]:checked+label::before {
+    left: 50%;
+    content: 'ON';
+    color: #fff;
+    background-color: #00b33c;
+    box-shadow: -3px -3px 5px rgba(255, 255, 255, .5),
+          3px 3px 5px #00b33c;
+  }
